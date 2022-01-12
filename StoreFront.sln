@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreFront.UI.MVC", "StoreFront.UI.MVC\StoreFront.UI.MVC.csproj", "{4C636811-B5C2-4E94-9BBE-DF592F5F6A05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreFront.DATA.EF", "StoreFront.DATA.EF\StoreFront.DATA.EF.csproj", "{A644384B-A28E-47BE-9230-FB2B20F31EEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{4C636811-B5C2-4E94-9BBE-DF592F5F6A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C636811-B5C2-4E94-9BBE-DF592F5F6A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C636811-B5C2-4E94-9BBE-DF592F5F6A05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A644384B-A28E-47BE-9230-FB2B20F31EEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A644384B-A28E-47BE-9230-FB2B20F31EEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A644384B-A28E-47BE-9230-FB2B20F31EEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A644384B-A28E-47BE-9230-FB2B20F31EEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
