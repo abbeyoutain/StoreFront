@@ -11,15 +11,6 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         [HttpGet]
-        [Authorize]
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your app description page.";
-
-            return View();
-        }
-
-        [HttpGet]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
