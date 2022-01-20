@@ -1,0 +1,82 @@
+﻿@model StoreFront.DATA.EF.MagicItem
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MagicItem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MagicItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MagicItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MagicItemImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MagicItemImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maker.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maker.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rarity.RarityLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rarity.RarityLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status.StatusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status.StatusName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MagicItemID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

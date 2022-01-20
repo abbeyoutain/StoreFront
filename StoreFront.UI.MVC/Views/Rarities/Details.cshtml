@@ -1,0 +1,26 @@
+﻿@model StoreFront.DATA.EF.Rarity
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rarity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RarityLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RarityLevel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RarityID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

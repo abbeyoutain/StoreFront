@@ -45,10 +45,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -165,9 +165,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MagicItemsController.cs" />
+    <Compile Include="Controllers\MakersController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RaritiesController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
+    <Compile Include="Controllers\StatusesController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -507,6 +514,41 @@
     <Content Include="_Archive\_OriginalContent\bootstrap.css.map" />
     <Content Include="_Archive\_OriginalContent\bootstrap.min.css.map" />
     <Content Include="Views\Shared\OriginalLayout.cshtml" />
+    <Content Include="Views\MagicItems\Create.cshtml" />
+    <Content Include="Views\MagicItems\Delete.cshtml" />
+    <Content Include="Views\MagicItems\Details.cshtml" />
+    <Content Include="Views\MagicItems\Edit.cshtml" />
+    <Content Include="Views\MagicItems\Index.cshtml" />
+    <Content Include="Views\Categories\Create.cshtml" />
+    <Content Include="Views\Categories\Delete.cshtml" />
+    <Content Include="Views\Categories\Details.cshtml" />
+    <Content Include="Views\Categories\Edit.cshtml" />
+    <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Departments\Create.cshtml" />
+    <Content Include="Views\Departments\Delete.cshtml" />
+    <Content Include="Views\Departments\Details.cshtml" />
+    <Content Include="Views\Departments\Edit.cshtml" />
+    <Content Include="Views\Departments\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Makers\Create.cshtml" />
+    <Content Include="Views\Makers\Delete.cshtml" />
+    <Content Include="Views\Makers\Details.cshtml" />
+    <Content Include="Views\Makers\Edit.cshtml" />
+    <Content Include="Views\Makers\Index.cshtml" />
+    <Content Include="Views\Rarities\Create.cshtml" />
+    <Content Include="Views\Rarities\Delete.cshtml" />
+    <Content Include="Views\Rarities\Details.cshtml" />
+    <Content Include="Views\Rarities\Edit.cshtml" />
+    <Content Include="Views\Rarities\Index.cshtml" />
+    <Content Include="Views\Statuses\Create.cshtml" />
+    <Content Include="Views\Statuses\Delete.cshtml" />
+    <Content Include="Views\Statuses\Details.cshtml" />
+    <Content Include="Views\Statuses\Edit.cshtml" />
+    <Content Include="Views\Statuses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
