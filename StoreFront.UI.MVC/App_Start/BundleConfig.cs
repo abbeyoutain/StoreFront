@@ -22,8 +22,11 @@ namespace StoreFront.UI.MVC
             //          "~/Scripts/bootstrap.js",
             //          "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/jquery").Include(
+                "~/Content/js/jquery.min.js"
+                ));
+
             bundles.Add(new ScriptBundle("~/bundles/template").Include(
-                "~/Content/js/jquery.min.js",
                 "~/Content/js/jquery-migrate-3.0.1.min.js",
                 "~/Content/js/popper.min.js",
                 "~/Content/js/bootstrap.min.js",
@@ -46,6 +49,7 @@ namespace StoreFront.UI.MVC
                       "~/Content/css/flaticon.css",
                       "~/Content/css/style.css"
                       ));
+
         }
     }
 }
