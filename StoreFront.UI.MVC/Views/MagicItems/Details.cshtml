@@ -7,8 +7,6 @@
 <h2>@ViewBag.Title</h2>
 
 <div>
-    <h4>MagicItem</h4>
-    <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.MagicItemName)
@@ -35,27 +33,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MagicItemImage)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MagicItemImage)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Category.CategoryName)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Category.CategoryName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Maker.FirstName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Maker.FirstName)
         </dd>
 
         <dt>
@@ -72,6 +54,22 @@
 
         <dd>
             @Html.DisplayFor(model => model.Status.StatusName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maker.MakerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maker.MakerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MagicItemImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MagicItemImage)
         </dd>
 
     </dl>

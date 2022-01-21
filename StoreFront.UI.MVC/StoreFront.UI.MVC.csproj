@@ -203,16 +203,11 @@
     <Content Include="Content\fonts\flaticon\font\flaticon.css" />
     <Content Include="Content\fonts\flaticon\font\flaticon.html" />
     <Content Include="Content\fonts\flaticon\font\Flaticon.svg" />
-    <Content Include="Content\images\about.jpg" />
     <Content Include="Content\images\bg_1.jpg" />
     <Content Include="Content\images\bg_2.jpg" />
     <Content Include="Content\images\bg_4.jpg" />
-    <Content Include="Content\images\image_1.jpg" />
-    <Content Include="Content\images\image_2.jpg" />
-    <Content Include="Content\images\image_3.jpg" />
-    <Content Include="Content\images\image_4.jpg" />
-    <Content Include="Content\images\image_5.jpg" />
-    <Content Include="Content\images\image_6.jpg" />
+    <Content Include="Content\images\fire1.jpg" />
+    <Content Include="Content\images\fire2.jpg" />
     <Content Include="Content\images\kind-1.jpg" />
     <Content Include="Content\images\kind-2.jpg" />
     <Content Include="Content\images\kind-3.jpg" />
@@ -220,10 +215,6 @@
     <Content Include="Content\images\kind-5.jpg" />
     <Content Include="Content\images\kind-6.jpg" />
     <Content Include="Content\images\loc.png" />
-    <Content Include="Content\images\person_1.jpg" />
-    <Content Include="Content\images\person_2.jpg" />
-    <Content Include="Content\images\person_3.jpg" />
-    <Content Include="Content\images\person_4.jpg" />
     <Content Include="Content\images\prod-1.jpg" />
     <Content Include="Content\images\prod-10.jpg" />
     <Content Include="Content\images\prod-11.jpg" />
@@ -236,6 +227,7 @@
     <Content Include="Content\images\prod-7.jpg" />
     <Content Include="Content\images\prod-8.jpg" />
     <Content Include="Content\images\prod-9.jpg" />
+    <Content Include="Content\images\smithTools.jpg" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\google-map.js" />
     <Content Include="Content\js\jquery-migrate-3.0.1.min.js" />

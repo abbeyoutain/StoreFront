@@ -14,7 +14,7 @@ namespace StoreFront.DATA.EF//.StoreFrontMetaData
         //public short MagicItemID { get; set; }
 
         [Required(ErrorMessage = "*")]
-        [Display(Name = "Magic Item Name")]
+        [Display(Name = "Name")]
         [StringLength(100, ErrorMessage = "* Value must be 100 characters or less.")]
         public string MagicItemName { get; set; }
 
@@ -66,7 +66,7 @@ namespace StoreFront.DATA.EF//.StoreFrontMetaData
         //public short RarityID { get; set; }
 
         [Required(ErrorMessage = "*")]
-        [Display(Name = "Rarity Level")]
+        [Display(Name = "Rarity")]
         [StringLength(100, ErrorMessage = "* Value must be 100 characters or less.")]
         public string RarityLevel { get; set; }
     }
@@ -111,7 +111,14 @@ namespace StoreFront.DATA.EF//.StoreFrontMetaData
     }
 
     [MetadataType(typeof(MakerMetadata))]
-    public partial class Maker { }
+    public partial class Maker
+    {
+        [Display(Name = "Maker Name")]
+        public string MakerName
+        {
+            get { return $"{FirstName} {LastName}"; }
+        }
+    }
     #endregion
 
     #region Department Metadata
@@ -154,7 +161,14 @@ namespace StoreFront.DATA.EF//.StoreFrontMetaData
     }
 
     [MetadataType(typeof(EmployeeMetadata))]
-    public partial class Employee { }
+    public partial class Employee
+    {
+        [Display(Name = "Employee Name")]
+        public string EmployeeName
+        {
+            get { return $"{FirstName} {LastName}"; }
+        }
+    }
     #endregion
 
 }

@@ -21,19 +21,19 @@
             @Html.DisplayNameFor(model => model.Price)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MagicItemImage)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Category.CategoryName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Maker.FirstName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Rarity.RarityLevel)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Status.StatusName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maker.MakerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MagicItemImage)
         </th>
         <th></th>
     </tr>
@@ -50,13 +50,7 @@
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.MagicItemImage)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Category.CategoryName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Maker.FirstName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Rarity.RarityLevel)
@@ -65,9 +59,15 @@
             @Html.DisplayFor(modelItem => item.Status.StatusName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MagicItemID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MagicItemID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MagicItemID })
+            @Html.DisplayFor(modelItem => item.Maker.MakerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MagicItemImage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.MagicItemID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MagicItemID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MagicItemID })
         </td>
     </tr>
 }
