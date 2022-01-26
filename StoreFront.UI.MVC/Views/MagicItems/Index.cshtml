@@ -62,7 +62,9 @@
             @Html.DisplayFor(modelItem => item.Maker.MakerName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.MagicItemImage)
+            @* Image Upload Utility step 1 *@
+            @*@Html.DisplayFor(modelItem => item.MagicItemImage)*@
+            <img src="~/Content/images/t_@item.MagicItemImage" alt="Book cover" title="@item.MagicItemImage" />
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.MagicItemID }) |

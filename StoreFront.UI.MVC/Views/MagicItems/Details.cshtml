@@ -32,6 +32,7 @@
             @Html.DisplayFor(model => model.Price)
         </dd>
 
+
         <dt>
             @Html.DisplayNameFor(model => model.Category.CategoryName)
         </dt>
@@ -64,16 +65,21 @@
             @Html.DisplayFor(model => model.Maker.MakerName)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MagicItemImage)
-        </dt>
+        @*<dt>
+                @Html.DisplayNameFor(model => model.MagicItemImage)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.MagicItemImage)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.MagicItemImage)
+            </dd>*@
 
     </dl>
 </div>
+
+<div class="col-md-6">
+    <img src="~/Content/images/@Model.MagicItemImage" alt="@Model.MagicItemName cover" title="@Model.MagicItemName" />
+</div>
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.MagicItemID }) |
     @Html.ActionLink("Back to List", "Index")
