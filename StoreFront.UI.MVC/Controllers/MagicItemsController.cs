@@ -39,6 +39,7 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         // GET: MagicItems/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName");
@@ -51,6 +52,7 @@ namespace StoreFront.UI.MVC.Controllers
         // POST: MagicItems/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MagicItemID,MagicItemName,Description,CategoryID,RarityID,Price,StatusID,MakerID,MagicItemImage")] MagicItem magicItem, HttpPostedFileBase itemImage)
@@ -101,6 +103,7 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         // GET: MagicItems/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(short? id)
         {
             if (id == null)
@@ -122,6 +125,7 @@ namespace StoreFront.UI.MVC.Controllers
         // POST: MagicItems/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "MagicItemID,MagicItemName,Description,CategoryID,RarityID,Price,StatusID,MakerID,MagicItemImage")] MagicItem magicItem, HttpPostedFileBase itemImage)
@@ -174,6 +178,7 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         // GET: MagicItems/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(short? id)
         {
             if (id == null)
@@ -189,6 +194,7 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         // POST: MagicItems/Delete/5
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(short id)

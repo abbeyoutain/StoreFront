@@ -36,6 +36,7 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         // GET: Makers/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
@@ -44,6 +45,7 @@ namespace StoreFront.UI.MVC.Controllers
         // POST: Makers/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MakerID,FirstName,LastName,Location")] Maker maker)
@@ -59,6 +61,7 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         // GET: Makers/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(short? id)
         {
             if (id == null)
@@ -76,6 +79,7 @@ namespace StoreFront.UI.MVC.Controllers
         // POST: Makers/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "MakerID,FirstName,LastName,Location")] Maker maker)
@@ -90,6 +94,7 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         // GET: Makers/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(short? id)
         {
             if (id == null)
@@ -105,6 +110,7 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         // POST: Makers/Delete/5
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(short id)
