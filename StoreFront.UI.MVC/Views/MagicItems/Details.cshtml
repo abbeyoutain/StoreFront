@@ -74,6 +74,18 @@
             </dd>*@
 
     </dl>
+
+    @* Shopping Cart Step 2 *@
+    <p>
+        @using (Html.BeginForm("AddToCart", "MagicItems", new { @magicItemID = Model.MagicItemID }, FormMethod.Post, new { @class = "text-center" }))
+        {
+            @Html.HiddenFor(x => x.MagicItemID)
+            <span class="label">Quantity: </span>
+            @Html.TextBox("Qty", 1, new { @class = "form-control", style = "max-width: 50px;display: inline;" })
+            <input type="submit" value="Add to Cart" class="btn btn-primary" name="qty" />
+        }
+    </p>
+
 </div>
 
 <div class="col-md-6">
