@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using StoreFront.DATA.EF;
 
 namespace StoreFront.UI.MVC.Controllers
 {
@@ -153,6 +154,20 @@ namespace StoreFront.UI.MVC.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    //If we land here, the new AspNetUser account has been created
+                    //#region Assign UserDetails during registration
+                    //UserDetail newUserDeets = new UserDetail();
+                    //newUserDeets.UserID = user.Id;
+                    //newUserDeets.FirstName = model.FirstName;
+                    //newUserDeets.LastName = model.LastName;
+
+                    //StorefrontEntities db = new StorefrontEntities();
+                    //db.UserDetails.Add(newUserDeets);
+                    //db.SaveChanges();
+                    //#endregion
+
+                    //return View("Login");
+
                     var code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking this link: <a href=\"" + callbackUrl + "\">link</a>");
