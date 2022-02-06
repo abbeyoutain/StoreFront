@@ -1,79 +1,84 @@
 ﻿@model StoreFront.DATA.EF.MagicItem
 
 @{
-    ViewBag.Title = "Magic Item Details";
+    ViewBag.Title = Model.MagicItemName + " Details";
 }
 
 <h2>@ViewBag.Title</h2>
 
 <div>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.MagicItemName)
-        </dt>
+    <div class="col-md-1">
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.MagicItemName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.CategoryName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category.CategoryName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Rarity.RarityLevel)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Rarity.RarityLevel)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Status.StatusName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Status.StatusName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Maker.MakerName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Maker.MakerName)
-        </dd>
-
-        @*<dt>
-                @Html.DisplayNameFor(model => model.MagicItemImage)
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.MagicItemName)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.MagicItemImage)
-            </dd>*@
+                @Html.DisplayFor(model => model.MagicItemName)
+            </dd>
 
-    </dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Category.CategoryName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Category.CategoryName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Rarity.RarityLevel)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Rarity.RarityLevel)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Status.StatusName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Status.StatusName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Maker.MakerName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Maker.MakerName)
+            </dd>
+
+            @*<dt>
+                    @Html.DisplayNameFor(model => model.MagicItemImage)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MagicItemImage)
+                </dd>*@
+
+        </dl>
+    </div>
 
     @* Shopping Cart Step 2 *@
     <p>
@@ -85,7 +90,6 @@
             <input type="submit" value="Add to Cart" class="btn btn-primary" name="qty" />
         }
     </p>
-
 </div>
 
 <div class="col-md-6">

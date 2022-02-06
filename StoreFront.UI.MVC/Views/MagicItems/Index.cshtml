@@ -47,7 +47,7 @@
 <h2>@ViewBag.Titel</h2>
 
 <p>
-    @Html.ActionLink("Create New Magic Item", "Create")
+    @Html.ActionLink("Create New Magic Item", "Create", null, new { @class = "btn btn-primary " })
 </p>
 <table class="data-table">
 
@@ -112,9 +112,9 @@
                     <img src="~/Content/images/t_@item.MagicItemImage" alt="Magic Item Image" title="@item.MagicItemImage" />
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.MagicItemID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.MagicItemID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.MagicItemID })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MagicItemID }, new { @class = "btn btn-primary " })
+                    @Html.ActionLink("Details", "Details", new { id = item.MagicItemID }, new { @class = "btn btn-primary " })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MagicItemID }, new { @class = "btn btn-primary " })
                 </td>
             </tr>
         }

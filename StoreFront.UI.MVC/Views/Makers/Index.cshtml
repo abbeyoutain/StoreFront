@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<StoreFront.DATA.EF.Maker>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Magic Item Makers";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
 </p>
 <table class="table">
     <tr>
@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.Location)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MakerID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MakerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MakerID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.MakerID }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Details", "Details", new { id=item.MakerID }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Delete", "Delete", new { id=item.MakerID }, new { @class = "btn btn-primary" })
         </td>
     </tr>
 }

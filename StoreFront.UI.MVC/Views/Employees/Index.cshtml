@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<StoreFront.DATA.EF.Employee>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Employees";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
 </p>
 <table class="table">
     <tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.Employee1.FirstName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EmployeeID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EmployeeID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeID }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Details", "Details", new { id=item.EmployeeID }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Delete", "Delete", new { id=item.EmployeeID }, new { @class = "btn btn-primary" })
         </td>
     </tr>
 }

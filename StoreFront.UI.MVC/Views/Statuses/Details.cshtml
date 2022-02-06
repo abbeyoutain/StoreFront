@@ -1,14 +1,12 @@
 ﻿@model StoreFront.DATA.EF.Status
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Model.StatusName + " Status";
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.Title</h2>
 
 <div>
-    <h4>Status</h4>
-    <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.StatusName)
