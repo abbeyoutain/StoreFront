@@ -20,8 +20,11 @@
         <th>
             @Html.DisplayNameFor(model => model.Department.DepartmentName)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Employee1.FirstName)
+        </th>*@
+        <th>
+            Reports To
         </th>
         <th></th>
     </tr>
@@ -38,7 +41,7 @@
             @Html.DisplayFor(modelItem => item.Department.DepartmentName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Employee1.FirstName)
+            @Html.DisplayFor(modelItem => item.Employee1.FirstName) @Html.DisplayFor(modelItem => item.Employee1.LastName)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeID }, new { @class = "btn btn-primary" })

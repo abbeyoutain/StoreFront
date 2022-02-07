@@ -32,12 +32,16 @@
             @Html.DisplayFor(model => model.Department.DepartmentName)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.Employee1.FirstName)
+        </dt>*@
+
+        <dt>
+            Reports To
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Employee1.FirstName)
+            @Html.DisplayFor(model => model.Employee1.FirstName) @Html.DisplayFor(model => model.Employee1.LastName)
         </dd>
 
     </dl>

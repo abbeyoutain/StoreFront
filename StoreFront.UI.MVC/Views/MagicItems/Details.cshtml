@@ -6,83 +6,84 @@
 
 <h2>@ViewBag.Title</h2>
 
+<div class="col-md-6" style="font-size: large">
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MagicItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MagicItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rarity.RarityLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rarity.RarityLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status.StatusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status.StatusName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maker.MakerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maker.MakerName)
+        </dd>
+
+        @*<dt>
+                @Html.DisplayNameFor(model => model.MagicItemImage)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MagicItemImage)
+            </dd>*@
+    </dl>
+</div>
+
+
 <div>
-    <div class="col-md-1">
-    </div>
+    <img src="~/Content/images/@Model.MagicItemImage" alt="@Model.MagicItemName cover" title="@Model.MagicItemName"/>
+</div>
 
-    <div class="col-md-10">
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.MagicItemName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.MagicItemName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Description)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Description)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Price)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Price)
-            </dd>
-
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Category.CategoryName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Category.CategoryName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Rarity.RarityLevel)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Rarity.RarityLevel)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Status.StatusName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Status.StatusName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Maker.MakerName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Maker.MakerName)
-            </dd>
-
-            @*<dt>
-                    @Html.DisplayNameFor(model => model.MagicItemImage)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.MagicItemImage)
-                </dd>*@
-
-        </dl>
-    </div>
-
+<div>
     @* Shopping Cart Step 2 *@
     <p>
-        @using (Html.BeginForm("AddToCart", "MagicItems", new { @magicItemID = Model.MagicItemID }, FormMethod.Post, new { @class = "text-center" }))
+        @using (Html.BeginForm("AddToCart", "MagicItems", new { @magicItemID = Model.MagicItemID }, FormMethod.Post))
         {
             @Html.HiddenFor(x => x.MagicItemID)
             <span class="label">Quantity: </span>
@@ -90,10 +91,6 @@
             <input type="submit" value="Add to Cart" class="btn btn-primary" name="qty" />
         }
     </p>
-</div>
-
-<div class="col-md-6">
-    <img src="~/Content/images/@Model.MagicItemImage" alt="@Model.MagicItemName cover" title="@Model.MagicItemName" />
 </div>
 
 <p>

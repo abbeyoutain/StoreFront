@@ -131,7 +131,13 @@
         </div>
     </section>
     <!-- END hero -->
-    <section>
+    @{
+        if (ViewBag.Title == "Magic Items" || ViewBag.Title == "Home")
+        {
+            @Html.Partial("BannerPartial")
+        }
+    }
+    <section class="col-md-10 offset-1">
         @RenderBody()
     </section>
     <!-- footer -->
