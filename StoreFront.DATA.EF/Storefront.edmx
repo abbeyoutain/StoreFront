@@ -4,26 +4,26 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="StorefrontModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="StorefrontModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="CategoryID" />
           </Key>
-          <Property Name="CategoryID" Type="smallint" Nullable="false" />
+          <Property Name="CategoryID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CategoryName" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="Departments">
           <Key>
             <PropertyRef Name="DepartmentID" />
           </Key>
-          <Property Name="DepartmentID" Type="smallint" Nullable="false" />
+          <Property Name="DepartmentID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DepartmentName" Type="varchar" MaxLength="200" Nullable="false" />
         </EntityType>
         <EntityType Name="Employees">
           <Key>
             <PropertyRef Name="EmployeeID" />
           </Key>
-          <Property Name="EmployeeID" Type="smallint" Nullable="false" />
+          <Property Name="EmployeeID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FirstName" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="LastName" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="DepartmentID" Type="smallint" Nullable="false" />
@@ -33,7 +33,7 @@
           <Key>
             <PropertyRef Name="MagicItemID" />
           </Key>
-          <Property Name="MagicItemID" Type="smallint" Nullable="false" />
+          <Property Name="MagicItemID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MagicItemName" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Description" Type="varchar" MaxLength="5000" Nullable="false" />
           <Property Name="CategoryID" Type="smallint" Nullable="false" />
@@ -47,7 +47,7 @@
           <Key>
             <PropertyRef Name="MakerID" />
           </Key>
-          <Property Name="MakerID" Type="smallint" Nullable="false" />
+          <Property Name="MakerID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FirstName" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="LastName" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Location" Type="varchar" MaxLength="1000" Nullable="false" />
@@ -56,15 +56,23 @@
           <Key>
             <PropertyRef Name="RarityID" />
           </Key>
-          <Property Name="RarityID" Type="smallint" Nullable="false" />
+          <Property Name="RarityID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RarityLevel" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="Statuses">
           <Key>
             <PropertyRef Name="StatusID" />
           </Key>
-          <Property Name="StatusID" Type="smallint" Nullable="false" />
+          <Property Name="StatusID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="StatusName" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserDetails">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="75" Nullable="false" />
         </EntityType>
         <Association Name="FK_Employees_Departments">
           <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
@@ -102,7 +110,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_MagicItems_Makers">
+        <Association Name="FK_MagicItems_Makers1">
           <End Role="Makers" Type="Self.Makers" Multiplicity="1" />
           <End Role="MagicItems" Type="Self.MagicItems" Multiplicity="*" />
           <ReferentialConstraint>
@@ -146,6 +154,7 @@
           <EntitySet Name="Makers" EntityType="Self.Makers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rarities" EntityType="Self.Rarities" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Statuses" EntityType="Self.Statuses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserDetails" EntityType="Self.UserDetails" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Employees_Departments" Association="Self.FK_Employees_Departments">
             <End Role="Departments" EntitySet="Departments" />
             <End Role="Employees" EntitySet="Employees" />
@@ -158,7 +167,7 @@
             <End Role="Categories" EntitySet="Categories" />
             <End Role="MagicItems" EntitySet="MagicItems" />
           </AssociationSet>
-          <AssociationSet Name="FK_MagicItems_Makers" Association="Self.FK_MagicItems_Makers">
+          <AssociationSet Name="FK_MagicItems_Makers1" Association="Self.FK_MagicItems_Makers1">
             <End Role="Makers" EntitySet="Makers" />
             <End Role="MagicItems" EntitySet="MagicItems" />
           </AssociationSet>
@@ -171,8 +180,7 @@
             <End Role="MagicItems" EntitySet="MagicItems" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="StorefrontModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -353,7 +361,16 @@
             <End Role="Statuses" EntitySet="Statuses" />
             <End Role="MagicItems" EntitySet="MagicItems" />
           </AssociationSet>
+          <EntitySet Name="UserDetails" EntityType="StorefrontModel.UserDetail" />
         </EntityContainer>
+        <EntityType Name="UserDetail">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="75" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -425,6 +442,15 @@
               <MappingFragment StoreEntitySet="Statuses">
                 <ScalarProperty Name="StatusID" ColumnName="StatusID" />
                 <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserDetails">
+            <EntityTypeMapping TypeName="StorefrontModel.UserDetail">
+              <MappingFragment StoreEntitySet="UserDetails">
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

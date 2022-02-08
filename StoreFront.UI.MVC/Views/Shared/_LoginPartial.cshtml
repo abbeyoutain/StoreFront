@@ -1,6 +1,18 @@
 ﻿@using Microsoft.AspNet.Identity
+@using StoreFront.DATA.EF
+
 @if (Request.IsAuthenticated)
 {
+    StorefrontEntities db = new StorefrontEntities();
+    string userID = User.Identity.GetUserId();
+    UserDetail currentUser = db.UserDetails.Where(ud => ud.UserID == userID).FirstOrDefault();
+    string userFN = "Guest"; //default incase no match was found in UserDetails table
+
+    if (currentUser != null)
+    {
+        userFN = currentUser.FirstName;
+    }
+
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
         @Html.AntiForgeryToken()
@@ -12,7 +24,7 @@
                 <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
             </ul>*@
 
-        <p class="mb-0"><a href="@Url.Action("Index", "Manage")" class="mr-2">Hello @User.Identity.GetUserName()</a> <a href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></p>
+        <p class="mb-0"><a href="@Url.Action("Index", "Manage")" class="mr-2">Hello, @userFN!</a> <a href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></p>
 
     }
 }

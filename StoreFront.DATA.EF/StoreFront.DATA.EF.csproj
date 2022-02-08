@@ -88,6 +88,9 @@
       <DependentUpon>Storefront.edmx</DependentUpon>
     </Compile>
     <Compile Include="StoreFrontMetaData\StoreFrontMetadata.cs" />
+    <Compile Include="UserDetail.cs">
+      <DependentUpon>Storefront.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Storefront.edmx">

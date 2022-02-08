@@ -32,5 +32,6 @@ namespace StoreFront.DATA.EF
         public virtual DbSet<Maker> Makers { get; set; }
         public virtual DbSet<Rarity> Rarities { get; set; }
         public virtual DbSet<Status> Statuses { get; set; }
+        public virtual DbSet<UserDetail> UserDetails { get; set; }
     }
 }
