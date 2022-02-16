@@ -6,9 +6,12 @@
 
 <h2>@ViewBag.Titel</h2>
 
-<p>
-    @Html.ActionLink("Create New Magic Item", "Create", null, new { @class = "btn btn-primary " })
-</p>
+@if (User.IsInRole("Admin") || User.IsInRole("User"))
+{
+    <p>
+        @Html.ActionLink("Create New Magic Item", "Create", null, new { @class = "btn btn-primary " })
+    </p>
+}
 <table class="data-table">
 
     <thead>
@@ -46,7 +49,10 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.MagicItemName)
+                    <a href="@Url.Action("Details", new { id = item.MagicItemID })" title="@item.MagicItemName">
+                        @Html.DisplayFor(modelItem => item.MagicItemName)
+                    </a>
+                    @*@Html.DisplayFor(modelItem => item.MagicItemName)*@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Description)
@@ -69,12 +75,20 @@
                 <td>
                     @* Image Upload Utility step 1 *@
                     @*@Html.DisplayFor(modelItem => item.MagicItemImage)*@
-                    <img src="~/Content/images/t_@item.MagicItemImage" alt="Magic Item Image" title="@item.MagicItemImage" />
+                    <a href="@Url.Action("Details",new {id=item.MagicItemID})" title="@item.MagicItemName">
+                        <img src="~/Content/images/t_@item.MagicItemImage" alt="Magic Item Image" title="@item.MagicItemImage" />
+                    </a>
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.MagicItemID }, new { @class = "btn btn-primary" })
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        @Html.ActionLink("Edit", "Edit", new { id = item.MagicItemID }, new { @class = "btn btn-primary" })
+                    }
                     @Html.ActionLink("Details", "Details", new { id = item.MagicItemID }, new { @class = "btn btn-primary mt-1" })
-                    @Html.ActionLink("Delete", "Delete", new { id = item.MagicItemID }, new { @class = "btn btn-primary mt-1" })
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        @Html.ActionLink("Delete", "Delete", new { id = item.MagicItemID }, new { @class = "btn btn-primary mt-1" })
+                    }
                 </td>
             </tr>
         }
