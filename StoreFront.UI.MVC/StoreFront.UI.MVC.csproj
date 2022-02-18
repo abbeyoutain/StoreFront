@@ -168,6 +168,7 @@
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\DepartmentsController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MagicItemsController.cs" />
     <Compile Include="Controllers\MakersController.cs" />
@@ -550,6 +551,7 @@
     <Content Include="Views\MagicItems\OriginalIndex.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
     <Content Include="Views\Shared\BannerPartial.cshtml" />
+    <Content Include="Views\Errors\Unresolved.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
