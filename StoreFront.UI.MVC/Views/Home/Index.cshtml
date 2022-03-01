@@ -46,7 +46,7 @@
                     <div class="text text-center">
                         <span class="sale">Sale</span>
                         <span class="category">Wondrous Item</span>
-                        <h2>Immovable Rod</h2>
+                        <h2><a href="@Url.Action("Details", "MagicItems", new { id = 4 })">Immovable Rod</a></h2>
                         <p class="mb-0"><span class="price price-sale">$350.00</span> <span class="price">$300.00</span></p>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                     <div class="text text-center">
                         <span class="seller">Best Seller</span>
                         <span class="category">Adventuring Gear</span>
-                        <h2>Bag of Holding</h2>
+                        <h2><a href="@Url.Action("Details", "MagicItems", new { id = 6 })">Bag of Holding</a></h2>
                         <span class="price">$300.00</span>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                     <div class="text text-center">
                         <span class="seller">Best Seller</span>
                         <span class="category">Wondrous Item</span>
-                        <h2>Broom of Flying</h2>
+                        <h2><a href="@Url.Action("Details", "MagicItems", new { id = 2 })">Broom of Flying</a></h2>
                         <span class="price">$500.00</span>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     <div class="text text-center">
                         <span class="new">New Arrival</span>
                         <span class="category">Weapon</span>
-                        <h2>Flame Tongue</h2>
+                        <h2><a href="@Url.Action("Details", "MagicItems", new { id = 17 })">Flame Tongue</a></h2>
                         <span class="price">$850.00</span>
                     </div>
                 </div>
@@ -101,26 +101,26 @@
 </section>
 
 @* ---Categories--- *@
-<section class="ftco-section ftco-no-pb">
+<section class="ftco-section ftco-no-pt">
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-4 col-md-4 ">
+            <div class="col-lg-4 col-md-4">
                 <div class="sort w-100 text-center ftco-animate">
                     <div class="img" style="background-image: url(/Content/images/ringOfFeatherFalling.jpeg);"></div>
-                    <h3>Adventuring Gear</h3>
+                    <h3><a href="@Url.Action("Index", "MagicItems")">Adventuring Gear</a></h3>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 ">
                 <div class="sort w-100 text-center ftco-animate">
                     <div class="img" style="background-image: url(/Content/images/driftglobe.jpg);"></div>
-                    <h3>Wondrous Items</h3>
+                    <h3><a href="@Url.Action("Index", "MagicItems")">Wondrous Items</a></h3>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 ">
                 <div class="sort w-100 text-center ftco-animate">
                     <div class="img" style="background-image: url(/Content/images/dancingSword.jpeg);"></div>
-                    <h3>Weapons</h3>
+                    <h3><a href="@Url.Action("Index", "MagicItems")">Weapons</a></h3>
                 </div>
             </div>
         </div>
@@ -145,12 +145,12 @@
                         <div class="testimony-wrap py-4">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
                             <div class="text">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="mb-4">My go-to providers of Brooms of Flying.</p>
                                 <div class="d-flex align-items-center">
                                     <div class="user-img" style="background-image: url(/Content/images/person_1.jpg)"></div>
                                     <div class="pl-3">
-                                        <p class="name">Jana Newbury</p>
-                                        <span class="position">Marketing Manager</span>
+                                        <p class="name">Tasha</p>
+                                        <span class="position">Archmage, The Witch Queen</span>
                                     </div>
                                 </div>
                             </div>
@@ -160,12 +160,12 @@
                         <div class="testimony-wrap py-4">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
                             <div class="text">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="mb-4">Excellent handiwork. Would buy again. This concludes my review.</p>
                                 <div class="d-flex align-items-center">
                                     <div class="user-img" style="background-image: url(/Content/images/person_2.jpg)"></div>
                                     <div class="pl-3">
-                                        <p class="name">Naedeen Sunstout</p>
-                                        <span class="position">Marketing Manager</span>
+                                        <p class="name">Mordenkainen</p>
+                                        <span class="position">Archmage</span>
                                     </div>
                                 </div>
                             </div>
@@ -175,12 +175,12 @@
                         <div class="testimony-wrap py-4">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
                             <div class="text">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="mb-4">I could not speak more highly of Moira’s Magical Melange. My travels have taken me far and wide, and the glories here match some of the finest I’ve encountered. I would recommend procuring a Ring of Feather Falling from the crafters here. Saved my skin more than once!</p>
                                 <div class="d-flex align-items-center">
                                     <div class="user-img" style="background-image: url(/Content/images/person_3.jpg)"></div>
                                     <div class="pl-3">
-                                        <p class="name">Damon Bornif</p>
-                                        <span class="position">Marketing Manager</span>
+                                        <p class="name">Volothamp Geddarm</p>
+                                        <span class="position">Esteemed researcher, traveler, scholar, historian, and writer</span>
                                     </div>
                                 </div>
                             </div>
@@ -190,12 +190,12 @@
                         <div class="testimony-wrap py-4">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
                             <div class="text">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="mb-4">My time is invaluable. I don’t waste it making my own Driftglobes. This place provides adequate Driftglobes for all my Driftglobe needs.</p>
                                 <div class="d-flex align-items-center">
                                     <div class="user-img" style="background-image: url(/Content/images/person_1.jpg)"></div>
                                     <div class="pl-3">
-                                        <p class="name">Yuri Cithreth</p>
-                                        <span class="position">Marketing Manager</span>
+                                        <p class="name">Xanathar</p>
+                                        <span class="position">Beholder, Lord of Crime</span>
                                     </div>
                                 </div>
                             </div>
