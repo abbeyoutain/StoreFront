@@ -13,7 +13,7 @@
 }
 
 <p class="text-right">
-    @Html.ActionLink("Back To Shopping", "Index", "MagicItems", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Back To Shopping", "Index", "MagicItems", null, new { @class = "btn btn-primary mt-2" })
 </p>
 
 <h2 class="text-center">@ViewBag.Title</h2>
@@ -48,7 +48,7 @@ else
                     {
                         @Html.Hidden("magicItemID", item.Key)
                         @Html.TextBox("qty", item.Value.Qty, new { @class = "form-control", style = "max-width: 50px;display: inline;" })
-                        <input type="submit" value="Update Quantity" class="btn btn-info" />
+                        <input type="submit" value="Update Quantity" class="btn btn-primary" />
                     }
 
                     @{
